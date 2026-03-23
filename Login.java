@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81535984c5b030464d45f21e324e4ca643afa9ee
 import java.util.Scanner;
 
 public class Login {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+<<<<<<< HEAD
         int choice;
 
         do {
@@ -62,5 +66,28 @@ public class Login {
         String password = sc.next();
 
         System.out.println("Registration successful!");
+=======
+        
+        System.out.println("--------------- Authentication --------------");
+        System.out.print("Username (left blank to cancel): ");
+        String username = sc.nextLine();
+        
+        if (username.equals("")) {
+            System.out.println("Cancelled.");
+            return;
+        }
+        
+        System.out.print("Password: ");
+        String password = sc.nextLine();
+        
+        // Simple check (in real app, check against saved users)
+        if (username.equals("admin") && password.equals("1234")) {
+            System.out.println("Login successful! Welcome, " + username + "!");
+        } else {
+            System.out.println("Invalid username or password.");
+        }
+        
+        sc.close();
+>>>>>>> 81535984c5b030464d45f21e324e4ca643afa9ee
     }
 }
